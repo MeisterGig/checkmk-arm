@@ -1,4 +1,6 @@
-# checkmk-arm
+# Container for CheckMK on ARM
+![Build Job](https://github.com/MeisterGig/checkmk-arm/actions/workflows/publish.yml/badge.svg)
+
 Check_mk as a docker container for Raspberry Pi/ARM7
 
 This dockerfile provides a runnable version of Check_mk for the ARM7 architecture, based on [chrisss404/check-mk-arm]().
