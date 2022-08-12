@@ -17,3 +17,4 @@ else
 omd start mon
 sleep infinity
 
+fi
