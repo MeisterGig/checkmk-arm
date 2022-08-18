@@ -18,8 +18,25 @@ If you want to persist your configuration, make sure to provide a volume for /om
 
 #
 
-## Run Container
+## Run Container with Docker
 `sudo docker run -d --name checkmk -v /data/checkmk:/opt/omd/sites -p 5000:5000 -p 8000:8000 ghcr.io/meistergig/checkmk-arm:latest`
+
+## Run Container with Docker-Compose
+
+``` docker-compose 
+version: '3.3'
+services:
+    checkmk:
+        container_name: checkmk
+        restart: unless-stopped
+        volumes:
+            - '/data/checkmk:/opt/omd/sites'
+        ports:
+            - '5000:5000' # HTTP Port
+            - '8000:8000' # Agent Reciever Port
+        image: 'ghcr.io/meistergig/checkmk-arm:latest'
+```
+
 
 ## Change Password
 To change the default password of the Admin User cmkadmin:
