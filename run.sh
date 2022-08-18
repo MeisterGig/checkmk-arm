@@ -13,8 +13,17 @@ if ! id mon &>/dev/null; then
     usermod -aG mon www-data
     usermod -aG omd mon
     omd enable mon
-else
-omd start mon
-tail -f /opt/omd/sites/mon/var/log/mkeventd.log
-
 fi
+
+
+echo "   _____ _______       _____ _______ _____ _   _  _____       ";
+echo "  / ____|__   __|/\   |  __ \__   __|_   _| \ | |/ ____|      ";
+echo " | (___    | |  /  \  | |__) | | |    | | |  \| | |  __       ";
+echo "  \___ \   | | / /\ \ |  _  /  | |    | | | . \` | | |_ |      ";
+echo "  ____) |  | |/ ____ \| | \ \  | |   _| |_| |\  | |__| |_ _ _ ";
+echo " |_____/   |_/_/    \_\_|  \_\ |_|  |_____|_| \_|\_____(_|_|_)";
+echo "                                                              ";
+echo "                                                              ";
+
+omd start mon
+sleep infinity

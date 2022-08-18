@@ -9,8 +9,18 @@ The installed omd environment is called `mon` and will be published on port 5000
 
 If you want to persist your configuration, make sure to provide a volume for /omd/sites
 
-To run a container:
-`sudo docker run -d --name checkmk -v /opt/omd/sites:/opt/omd/sites -p 5000:5000 ghcr.io/MeisterGig/checkmk-arm:latest`
+#
+
+## Run Container
+`sudo docker run -d --name checkmk -v /data/checkmk:/opt/omd/sites -p 5000:5000 -p 8000:8000 ghcr.io/meistergig/checkmk-arm:latest`
+
+## Change Password
+To change the default password of the Admin User cmkadmin:
+
+``` bash 
+sudo docker exec -it checkmk /bin/su - mon
+htpasswd etc/htpasswd cmkadmin
+```
 
 ## Upgrading an older version
 Open a shell inside the checkmk container:
