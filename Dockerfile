@@ -11,6 +11,7 @@ RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
 EXPOSE 5000/tcp
+EXPOSE 8000/tcp
 WORKDIR /app
 COPY *.sh /app/
 CMD ["sh", "/app/run.sh"]
