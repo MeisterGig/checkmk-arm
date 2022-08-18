@@ -1,11 +1,12 @@
 <div align="center">
-    <div style="display: flex;">
-        <a href="https://github.com/MeisterGig/checkmk-arm/actions/workflows/publish.yml>
-            <img src="https://github.com/MeisterGig/checkmk-arm/actions/workflows/publish.yml/badge.svg">
-        </a>
-    </div>
     <h1>Container for CheckMK on ARM 📦📊</h1>
+    
+    
+[![Release](https://github.com/MeisterGig/checkmk-arm/actions/workflows/publish.yml/badge.svg)](https://github.com/MeisterGig/checkmk-arm/actions/workflows/publish.yml)
 </div>
+
+
+
 
 Check_mk as a docker container for Raspberry Pi/ARM7
 
